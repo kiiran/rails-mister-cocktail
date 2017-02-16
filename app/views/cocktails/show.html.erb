@@ -1,0 +1,17 @@
+<h1><%= @cocktail.name %></h1>
+<h3>Ingredients</h3>
+<% if @cocktail.doses.empty? %>
+  <p><em>(Add the ingredients for this cocktail using the button below)</em></p>
+<% end %>
+<table>
+  <% @cocktail.doses.each do |d| %>
+    <tr>
+      <td><%= d.ingredient.name %>:</td>
+      <td><%= d.description %></td>
+      <td><%= link_to "Delete ingredient", dose_path(id: d.id), method: :delete, class: "btn btn-primary btn-small" %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Add an ingredient", new_cocktail_dose_path(cocktail_id: @cocktail.id), class: "btn btn-primary" %>
+<%= link_to "Back to cocktail list", cocktails_path, class: "btn btn-danger" %>

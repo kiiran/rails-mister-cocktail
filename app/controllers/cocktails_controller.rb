@@ -17,7 +17,7 @@ class CocktailsController < ApplicationController
     respond_to do |format|
 
       if @cocktail.save
-        format.html { redirect_to cocktail_path(id: @cocktail.id), notice: 'cocktail was successfully created.' }
+        format.html { redirect_to new_cocktail_dose_path(cocktail_id: @cocktail.id), notice: 'cocktail was successfully created.' }
         format.json { render :show, status: :created, location: @cocktail }
       else
         format.html { render :new }

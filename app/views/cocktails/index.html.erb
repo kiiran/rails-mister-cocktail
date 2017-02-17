@@ -10,7 +10,7 @@
     <% @cocktails.each do |c| %>
       <tr>
         <td>
-          <img src="#<%#= cl_image_path c.photo, height: 120, width: 160, crop: :fill %>" alt="<%= c.name %>">
+          <img src="<%= cl_image_path c.photo, height: 120, width: 160, crop: :fill %>" alt="<%= c.name %>">
         </td>
         <td>
           <%= c.name %>

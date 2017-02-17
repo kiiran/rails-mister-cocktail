@@ -11,10 +11,12 @@
           <h2>
             <%= c.name %>
           </h2>
-          <ul class="list-inline">
+          <ul>
             <% c.doses.each do |d| %>
-              <li><%= d.ingredient.name %>: </li>
-              <li><%= d.description %></li>
+              <ul class="list-inline">
+                <li><%= d.ingredient.name %>: </li>
+                <li><%= d.description %></li>
+              </ul>
             <% end %>
           </ul>
           <div class="card-description">

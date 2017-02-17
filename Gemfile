@@ -39,7 +39,8 @@ gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
-
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave', '~> 0.11.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

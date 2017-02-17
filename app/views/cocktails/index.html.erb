@@ -1,4 +1,6 @@
 <h1>Cocktails</h1>
+<%= cl_image_tag("gybgel5p1yrduudf8aoc",
+      width: 400, height: 300, crop: :fill) %>
 <table>
   <thead>
     <th>Name</th>
@@ -9,6 +11,9 @@
   <tbody>
     <% @cocktails.each do |c| %>
       <tr>
+        <td>
+          <img src="<%= cl_image_path c.photo, height: 120, width: 160, crop: :fill %>" alt="<%= c.name %>">
+        </td>
         <td>
           <%= c.name %>
         </td>
